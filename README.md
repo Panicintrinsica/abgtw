@@ -1,27 +1,7 @@
-# Abgtw
+# ABGGTW.Info
+A progressive web application built in Angular to provide more comprehensive information about the _Above & Beyond Group Therapy Weekenders_ for concert-goers.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.0-next.5.
+The primary impetus for this project was to address the vague, sometimes conflicting, and disparate information about how to prepare for the Washington State Weekender by providing guides, checklists, and answers to the questions that are most frequently asked up in the official ABGT Discord, such as more specific information about the food available, climate, differences between camping options, travel, and more.
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# Note
+This project is currently in development and is being rewritten from the ground up. This is **not** the currently live version on abgtw.info, that is the old, semi-broken prototype that was used as an example for the target audience.
