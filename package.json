@@ -5,7 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "watch": "ng build --watch --configuration development",
+    "pwa": "ng build && http-server -p 8080 -c-1 dist/abgtw",
+    "dev": "ng serve --configuration development",
     "test": "ng test"
   },
   "private": true,
@@ -18,6 +19,7 @@
     "@angular/platform-browser": "^17.0.0-next.0",
     "@angular/platform-browser-dynamic": "^17.0.0-next.0",
     "@angular/router": "^17.0.0-next.0",
+    "@angular/service-worker": "^17.0.0-next.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.0"

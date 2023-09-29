@@ -1,0 +1,52 @@
+<div class="toolbar">
+
+  <div class="selection-row">
+
+    <div class="select-item">
+      <div class="select-label">Budget</div>
+      <div class="select-wrapper">
+        <select [(ngModel)]="currentBudget" (change)="changeBudget()">
+          <option value="0">Minimum</option>
+          <option value="1">Modest</option>
+          <option value="2">Comfortable</option>
+          <option value="3">Spare No Expense</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="select-item">
+      <div class="select-label">Accommodations</div>
+      <div class="select-wrapper" >
+        <select [(ngModel)]="currentAccommodation" (change)="changeAccommodation()">
+          <option value="camping">Camping</option>
+          <option value="hotel">Hotel</option>
+        </select>
+      </div>
+    </div>
+
+
+  </div>
+
+</div>
+
+<div class="checklist-group" [formGroup]="generalForm">
+  <h2 class="checklist-header">General Items</h2>
+  <ul class="checklist" formArrayName="generalChecklist">
+    <li *ngFor="let item of generalChecklist.controls; let i = index">
+      <ng-container *ngIf="shouldDisplay(item.value)">
+        <input
+          type="checkbox"
+          [id]="'g' + i"
+          [checked]="item.value.checked"
+          (change)="checkItem(generalChecklist, i)"
+        >
+        <label [for]="'g' + i"
+               [attr.data-tooltip]="item.value.tooltip ? item.value.tooltip : null"
+               data-tooltip-location="right"
+        >
+          {{ item.value.tooltip ? item.value.name + '*' : item.value.name  }}
+        </label>
+      </ng-container>
+    </li>
+  </ul>
+</div>
